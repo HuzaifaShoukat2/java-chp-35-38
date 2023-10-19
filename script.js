@@ -31,30 +31,39 @@
 
 // ? Question 4
 
-// function calculator(num1, num2, opr) {
-//   if (opr === "+") {
-//     return num1 + num2;
-//   } else if (opr === "-") {
-//     return num1 - num2;
-//   } else if (opr === "*") {
-//     return num1 * num2;
-//   } else if (opr === "/") {
-//     if (num2 === 0) {
-//       return "Disvided By Zero Is Not Possible";
-//     }
-//     return num1 / num2;
-//   } else {
-//     return "Invalid Operator. Please Use (+, -, /, * )";
-//   }
-// }
+//! Also For Second Assignment Of 14 October
 
-// var num1 = parseInt(prompt("Enter First Number"));
-// var opr = prompt("Please Enter Operator(+, -, /, *)");
-// var num2 = parseInt(prompt("Enter Second Number"));
-// var result = calculator(num1, num2, opr);
-
-// document.write("Result: " + result);
-
+function calculator(num1, num2, opr) {
+    num1 = parseFloat(num1);
+    num2 = parseFloat(num2);
+  
+    if (isNaN(num1) || isNaN(num2)) {
+      return "Invalid input. Please enter valid numbers.";
+    }
+  
+    if (opr === "+") {
+      return num1 + num2;
+    } else if (opr === "-") {
+      return num1 - num2;
+    } else if (opr === "*") {
+      return num1 * num2;
+    } else if (opr === "/") {
+      if (num2 === 0) {
+        return "Divided By Zero Is Not Possible";
+      }
+      return num1 / num2;
+    } else {
+      return "Invalid Operator. Please Use (+, -, /, *)";
+    }
+  }
+  
+  var num1 = prompt("Enter First Number");
+  var opr = prompt("Please Enter Operator (+, -, /, *)");
+  var num2 = prompt("Enter Second Number");
+  var result = calculator(num1, num2, opr);
+  
+  alert("Result: " + result);
+  
 
 // ?Question 5
 
@@ -96,7 +105,6 @@
 // var endNumber = parseInt(prompt("Enter End Number"));
 
 // counting(startNumber,endNumber);
-
 
 //? Question 8
 
@@ -151,7 +159,6 @@
 //   document.write(inputStr + " is not Palindrome");
 // }
 
-
 // ?Question 11
 
 // function capitalizeFirstLetterOFEachWord(inputString){
@@ -162,12 +169,10 @@
 // var resultStr = capitalizeWord.join(' ');
 // return resultStr;
 
-
 // }
 // var inputString = "the quick brown fox jump over the lazy dog";
 // var outputString = capitalizeFirstLetterOFEachWord(inputString);
 // document.write(outputString);
-
 
 //? Question 12
 
@@ -192,9 +197,7 @@
 // var longest = longestWord(inputString);
 // document.write("Longest Word: " + longest );
 
-
 //? Question 13
-
 
 // function countOccurrenceOfLetter(inputString,letter){
 //   let count = 0;
@@ -205,15 +208,12 @@
 //   }
 //   return count;
 
-
 // }
 
 // var inputString ="Resourses.com";
 // var specifiedLetter = "o";
 // var occurrenceCount = countOccurrenceOfLetter(inputString,specifiedLetter);
 // document.write("The Letter "+ specifiedLetter + " Appeared " + occurrenceCount + " Times In The String.")
-
-
 
 //? Question 14
 
@@ -231,7 +231,6 @@
 
 // !Calculate Area
 
-
 // function calculateArea(radius){
 
 //   var circumference = Math.PI *Math.pow(radius,2);
@@ -241,4 +240,3 @@
 // }
 // var radius = 5;
 // calculateArea(radius);
-
